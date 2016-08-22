@@ -17,15 +17,16 @@ if ($c->isEditMode()) { ?>
                         <?php    echo h($item['title'])?>
                     </p>
                 <?php     } ?>
-                <?php    
+                <?php
                 $f = File::getByID($item['fID']);
                 if (is_object($f) && $enableImage == 1) {
                     if ($cropImage == 1) {
                         $width = $cropWidth;
                         $height = $cropHeight;
+                        $alt = null;
                         $crop = $crop;
-                        $image = $ih->getThumbnail($f, $width, $height, $crop);
-                        echo '<img src="' . $image->src . '">';
+                        $image = $ih->outputThumbnail($f, $width, $height, $alt, $crop);
+                        echo $image;
                     } else if ($cropImage == 0) {
                         $tag = Core::make('html/image', array($f, false))->getTag();
                         echo $tag;
