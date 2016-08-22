@@ -42,9 +42,9 @@ if(!$cropHeight) {
                 <option <?php    echo $enableImage == 0 ? 'selected' : ''?> value="0"><?php    echo t('No')?></option>
                 <option <?php    echo $enableImage == 1 ? 'selected' : ''?> value="1"><?php    echo t('Yes')?></option>
             </select>
-            <button type="button" class="btn btn-default option-button <?php    echo $enableImage == 0 ? 'disabled' : '';?>">Options</button>
+            <button type="button" class="btn btn-default option-button <?php echo $enableImage == 0 ? 'disabled' : '';?>">Options</button>
         </div>
-        <div class="option-box-options image-options <?php    echo $enableImage == 0 || !$enableImage ? 'disabled' : 'disabled'; ?>">
+        <div class="option-box-options image-options <?php echo $enableImage == 0 ? 'disabled' : ''; ?>">
             <hr/>
             <label class="control-label"><?php    echo t('Resize Images?');?></label>
             <select class="form-control" name="cropImage" id="toggleCrop">
@@ -295,11 +295,12 @@ if(!$cropHeight) {
 // Toggle images
  $('#toggleImage').click(function() {
      var enableImage = $('#toggleImage option:selected').val();
-     console.log("Image toggled value is " + enableImage);
      if (enableImage == 0) {
          enable_image = 0;
+         $('.image-options').addClass('disabled');
      } else if (enableImage == 1) {
          enable_image = 1;
+         $('.image-options').removeClass('disabled');
      }
  });
 
