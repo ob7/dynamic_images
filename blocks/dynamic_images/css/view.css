@@ -1,0 +1,27 @@
+.ccm-page .repeatable-element-container.row-of-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item + .dynamic-image-item {
+    margin-top: 0 !important; }
+.ccm-page .repeatable-element-container.default .dynamic-image-item, .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item {
+  margin-bottom: 16px;
+  border-radius: 16px; }
+  .ccm-page .repeatable-element-container.default .dynamic-image-item + .dynamic-image-item, .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item + .dynamic-image-item {
+    margin-top: 16px; }
+  .ccm-page .repeatable-element-container.default .dynamic-image-item .dynamic-image-item-image img, .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item .dynamic-image-item-image img {
+    display: block;
+    margin: 0 auto;
+    background: #3c4e61;
+    padding: 16px; }
+  .ccm-page .repeatable-element-container.default .dynamic-image-item .dynamic-image-item-title, .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item .dynamic-image-item-title {
+    text-align: center; }
+    .ccm-page .repeatable-element-container.default .dynamic-image-item .dynamic-image-item-title p, .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item .dynamic-image-item-title p {
+      color: #3c4e61;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+      padding: 0; }
+
+/*# sourceMappingURL=view.css.map */

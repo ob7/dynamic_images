@@ -1,0 +1,45 @@
+$color1: #3c4e61;
+$color2: #003e80;
+$color3: #00ff7e;
+.ccm-page {
+    .repeatable-element-container {
+        &.row-of-flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .dynamic-image-item {
+                &+.dynamic-image-item {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+        &.default,&.row-of-flex {
+            .dynamic-image-item {
+                margin-bottom: 16px;
+                border-radius: 16px;
+                &+.dynamic-image-item {
+                    margin-top: 16px;
+                }
+                .dynamic-image-item-image {
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        background: $color1;
+                        padding: 16px;
+                    }
+                }
+                .dynamic-image-item-title {
+                    text-align: center;
+                    p {
+                        color: $color1;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

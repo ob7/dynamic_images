@@ -1,8 +1,9 @@
-<?php     defined('C5_EXECUTE') or die("Access Denied.");
+<?php defined('C5_EXECUTE') or die("Access Denied.");
 
 echo Core::make('helper/concrete/ui')->tabs(array(
     array('items', t('Items'), true),
-    array('options', t('Options'))
+    array('options', t('Options')),
+    array('layout', t('Layout'))
 ));
 
 if(!$cropWidth) {
@@ -28,47 +29,62 @@ if(!$cropHeight) {
 </div>
 
 <div class="ccm-tab-content" id="ccm-tab-content-options">
-    <label class="control-label"><?php    echo t('Display Title?');?></label>
+    <label class="control-label"><?php echo t('Display Title?');?></label>
     <div class="option-box" data-option=".display-title">
         <select class="form-control" name="displayTitle">
-            <option <?php    echo $displayTitle == 0 ? 'selected' : '';?> value="0"><?php    echo t('No')?></option>
-            <option <?php    echo $displayTitle == 1 ? 'selected' : '';?> value="1"><?php    echo t('Yes')?></option>
+            <option <?php echo $displayTitle == 0 ? 'selected' : '';?> value="0"><?php echo t('No')?></option>
+            <option <?php echo $displayTitle == 1 ? 'selected' : '';?> value="1"><?php echo t('Yes')?></option>
         </select>
     </div>
-    <label class="control-label"><?php    echo t('Enable Images?');?></label>
+    <label class="control-label"><?php echo t('Enable Images?');?></label>
     <div class="option-box" data-option=".enable-image">
         <div class="option-box-row">
             <select class="form-control top-option" name="enableImage" id="toggleImage">
-                <option <?php    echo $enableImage == 0 ? 'selected' : ''?> value="0"><?php    echo t('No')?></option>
-                <option <?php    echo $enableImage == 1 ? 'selected' : ''?> value="1"><?php    echo t('Yes')?></option>
+                <option <?php echo $enableImage == 0 ? 'selected' : ''?> value="0"><?php echo t('No')?></option>
+                <option <?php echo $enableImage == 1 ? 'selected' : ''?> value="1"><?php echo t('Yes')?></option>
             </select>
             <button type="button" class="btn btn-default option-button <?php echo $enableImage == 0 ? 'disabled' : '';?>">Options</button>
         </div>
         <div class="option-box-options image-options <?php echo $enableImage == 0 ? 'disabled' : ''; ?>">
             <hr/>
-            <label class="control-label"><?php    echo t('Resize Images?');?></label>
+            <label class="control-label"><?php echo t('Resize Images?');?></label>
             <select class="form-control" name="cropImage" id="toggleCrop">
-                <option <?php    echo $cropImage == 0 ? 'selected' : ''?> value="0"><?php    echo t('No')?></option>
-                <option <?php    echo $cropImage == 1 ? 'selected' : ''?> value="1"><?php    echo t('Yes')?></option>
+                <option <?php echo $cropImage == 0 ? 'selected' : ''?> value="0"><?php echo t('No')?></option>
+                <option <?php echo $cropImage == 1 ? 'selected' : ''?> value="1"><?php echo t('Yes')?></option>
             </select>
             <div class="crop-options <?php    echo $cropImage == 0 ? 'disabled' : ''?>">
-                <label class="control-label"><?php    echo t('Width');?></label>
-                <input class="form-control" name="cropWidth" type="text" value="<?php    echo $cropWidth?>"/>
+                <label class="control-label"><?php echo t('Width');?></label>
+                <input class="form-control" name="cropWidth" type="text" value="<?php echo $cropWidth?>"/>
 
-                <label class="control-label"><?php    echo t('Height');?></label>
-                <input class="form-control" name="cropHeight" type="text" value="<?php    echo $cropHeight?>"/>
+                <label class="control-label"><?php echo t('Height');?></label>
+                <input class="form-control" name="cropHeight" type="text" value="<?php echo $cropHeight?>"/>
 
-                <label class="control-label"><?php    echo t('Crop to dimensions?');?></label>
+                <label class="control-label"><?php echo t('Crop to dimensions?');?></label>
                 <select class="form-control" name="crop">
-                    <option <?php    echo $crop ? '' : 'selected'?> value="0">No</option>
-                    <option <?php    echo $crop ? 'selected' : ''?> value="1">Yes</option>
+                    <option <?php echo $crop ? '' : 'selected'?> value="0">No</option>
+                    <option <?php echo $crop ? 'selected' : ''?> value="1">Yes</option>
                 </select>
             </div>
         </div>
     </div>
-    <label class="control-label"><?php    echo t('Custom Class For Entire Block (Optional):');?></label>
+    <label class="control-label"><?php echo t('Custom Class For Entire Block (Optional):');?></label>
     <div class="option-box" data-option=".custom-class">
-        <input class="form-control" name="customClass" type="text" value="<?php  echo $customClass?>"/>
+        <input class="form-control" name="customClass" type="text" value="<?php echo $customClass?>"/>
+    </div>
+</div>
+<div class="ccm-tab-content" id="ccm-tab-content-layout">
+    <label class="control-label">
+        <?php echo t('Choose styling')?>
+    </label>
+    <select class="form-control" id="stylingOptions" name="styling">
+        <option <?php echo $styling == 'none' ? 'selected ' : ''?> value="none">None (No Styles will be applied by block)</option>
+        <option <?php echo $styling == 'default' ? 'selected ' : ''?>value="default">Default</option>
+        <option <?php echo $styling == 'row-of-flex' ? 'selected ' : ''?>value="row-of-flex">Row</option>
+    </select>
+    <div id="stylesPreview" class="style-preview-container <?php echo $styling?>">
+        <h3>Style Preview:</h3>
+        <div class="style-preview">
+        </div>
     </div>
 </div>
 <script>
@@ -245,7 +261,7 @@ if(!$cropHeight) {
      });
 
      // Initial load up of already saved items
-     <?php     if($items) {
+     <?php if($items) {
          $itemNumber = 1;
          foreach ($items as $item) { ?>
              entriesContainer.append(entriesTemplate({

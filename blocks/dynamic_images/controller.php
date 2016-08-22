@@ -10,7 +10,7 @@ class Controller extends BlockController
     protected $btInterfaceWidth = "992";
     protected $btInterfaceHeight = "650";
     protected $btWrapperClass = "ccm-ui";
-    protected $btIgnorePageThemeGridFrameworkContainer = true;
+    // protected $btIgnorePageThemeGridFrameworkContainer = true;
     protected $btDefaultSet = 'multimedia';
 
     public function getBlockTypeName()
@@ -27,17 +27,22 @@ class Controller extends BlockController
     {
         $this->requireAsset('core/file-manager');
 
-        if(!$this->displayTitle) {
+        if(!$this->displayTitle) { //set displayTitle to true on initial add
             $displayTitle = 1;
         }
         $this->set('displayTitle', $displayTitle);
 
-        if(!$this->enableImage) {
+        if(!$this->enableImage) { //set displayImage to true on initial add
             $enableImage = 1;
         }
         $this->set('enableImage', $enableImage);
 
-        $this->requireAsset('dynamic_images_form');
+        if(!$this->styling) { //set styling to default on initial add
+            $styling = 'default';
+        }
+        $this->set('styling', $styling);
+
+        $this->requireAsset('dynamic_images_form'); //load external assets for form.php
     }
 
     public function edit()

@@ -35,6 +35,11 @@
       <notnull/>
     </field>
     <field name="customClass" type="text"/>
+    <field name="styling" type="text">
+      <unsigned/>
+      <default value="default"/>
+      <notnull/>
+    </field>
   </table>
 
   <table name="btRepeatableImage">
