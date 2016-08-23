@@ -2,8 +2,8 @@
     <img alt="" src="http://archebian.org/img/dynamic-images-logo.jpg"/>
 </p>
 <hr>
-<h4> Dynamic Images is a Concrete5 addon </h2>
-<p>
+<h4 align="center"> Dynamic Images is a Concrete5 addon </h2>
+<p align="center">
     Dynamic Images allows you to add any amount of images to an unordered list.
 </p>
 <article class="markdown-body">
