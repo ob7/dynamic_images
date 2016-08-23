@@ -65,6 +65,12 @@ class Controller extends BlockController
         // Assets for bootstrap checkbox as switch
         $this->requireAsset('javascript','bootstrapswitch');
         $this->requireAsset('css','bootstrapswitch');
+
+        //required to load pass 0 integer to form in the case its 0, otherwise its ignored
+        if($this->imagePadding == 0) {
+            $imagePadding = 0;
+            $this->set('imagePadding', $imagePadding);
+        }
     }
 
     public function view()

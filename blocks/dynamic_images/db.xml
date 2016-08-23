@@ -40,6 +40,8 @@
       <default value="default"/>
       <notnull/>
     </field>
+    <field name="backgroundColor" type="string" size="30"/>
+    <field name="imagePadding" type="integer" size="200">
   </table>
 
   <table name="btRepeatableImage">

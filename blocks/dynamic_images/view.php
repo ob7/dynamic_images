@@ -8,7 +8,13 @@ if ($c->isEditMode()) { ?>
         <div style="padding: 40px 0px 40px 0px"><?php echo t('Repeatable Element view disabled in edit mode.')?></div>
     </div>
 <?php } else { ?>
-    <div class="repeatable-element-container <?php  echo $customClass ? $customClass : '' ?> <?php echo $styling;?>">
+        <style>
+         .repeatable-element-container-<?php echo h($bID)?> .dynamic-image-item .dynamic-image-item-image img {
+             background-color: <?php echo h($backgroundColor)?>;
+             padding: <?php echo h($imagePadding)?>px;
+         }
+        </style>
+    <div class="repeatable-element-container repeatable-element-container-<?php echo h($bID)?> <?php  echo $customClass ? $customClass : '' ?> <?php echo $styling;?>">
         <?php if(count($items) > 0) { ?>
 
             <?php foreach($items as $item) {?>

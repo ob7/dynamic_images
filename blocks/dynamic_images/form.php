@@ -1,10 +1,12 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
 
+$color = Core::make('helper/form/color');
+
 echo Core::make('helper/concrete/ui')->tabs(array(
     array('items', t('Items'), true),
     array('options', t('Options')),
     array('layout', t('Layout')),
-    array('colors', t('Colors'))
+    array('colors', t('Colors & Padding'))
 ));
 
 if(!$cropWidth) {
@@ -91,13 +93,59 @@ $(document).ready(function(){
         <option <?php echo $styling == 'row-of-flex' ? 'selected ' : ''?>value="row-of-flex">Row</option>
     </select>
     <div id="stylesPreview" class="style-preview-container <?php echo $styling?>">
-        <h3>Layout Preview:</h3>
+        <h3>Layout Example:</h3>
         <div class="style-preview">
         </div>
     </div>
 </div>
 <div class="ccm-tab-content" id="ccm-tab-content-colors">
-    <?php echo $form->label('backgroundColor', t('Background Color'))?><br/>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+                <?php echo $form->label('backgroundColor', t('Background Color'))?><br>
+                <?php echo $color->output('backgroundColor', $backgroundColor ? $backgroundColor : 'rgba(60,78,97,1.0)', array('showAlpha' => 'true'));?>
+                <p class="small muted">This color appears behind the image if the image has padding.</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="form-group" id="image-padding-slider">
+                <?php
+                echo $form->label('imagePadding', t('Image padding: '));
+                ?> 
+                <span class="image_padding_slider">
+                    <?php 
+                    if (isset($imagePadding)){
+                        echo $imagePadding;
+                    } else {
+                        echo '0';
+                    }
+                    ?>px
+                </span> 
+                <?php
+                echo $form->text('imagePadding', $imagePadding, array('class'=>'image_padding_slider'));
+                ?>
+            <div class="image_padding_slider">
+            </div>
+            <p class="small muted">This is the padding applied to the images themselves.  If any padding is present the color set to the left will appear.</p>
+            <script type="text/javascript">
+            $('input.image_padding_slider').hide();
+            $('div.image_padding_slider').
+            slider(
+                {
+                    range: "min",
+                    min  : 0,
+                    step : 1,
+                    max  : 200,
+                    value: parseInt($('span.image_padding_slider').text(),10),
+                    slide: function(event, uiobj) {
+                        $('span.image_padding_slider').text(uiobj.value+'px');
+                        $('input.image_padding_slider').val(uiobj.value);
+                    }
+                });
+            </script>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
  $('.option-box select.top-option').click(function() {

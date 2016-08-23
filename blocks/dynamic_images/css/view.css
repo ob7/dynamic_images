@@ -12,9 +12,7 @@
     margin-top: 16px; }
   .ccm-page .repeatable-element-container.default .dynamic-image-item .dynamic-image-item-image img, .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item .dynamic-image-item-image img {
     display: block;
-    margin: 0 auto;
-    background: #3c4e61;
-    padding: 16px; }
+    margin: 0 auto; }
   .ccm-page .repeatable-element-container.default .dynamic-image-item .dynamic-image-item-title, .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item .dynamic-image-item-title {
     text-align: center; }
     .ccm-page .repeatable-element-container.default .dynamic-image-item .dynamic-image-item-title p, .ccm-page .repeatable-element-container.row-of-flex .dynamic-image-item .dynamic-image-item-title p {
