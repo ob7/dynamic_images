@@ -126,7 +126,7 @@ $(document).ready(function(){
                 ?>
             <div class="image_padding_slider">
             </div>
-            <p class="small muted">This is the padding applied to the images themselves.  If any padding is present the color set to the left will appear.</p>
+            <p class="small muted">This is the padding applied to the images themselves.  If any padding is present the color set to the left will appear as a border.</p>
             <script type="text/javascript">
             $('input.image_padding_slider').hide();
             $('div.image_padding_slider').

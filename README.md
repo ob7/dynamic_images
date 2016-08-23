@@ -1,9 +1,9 @@
 <p align="center">
-    <img alt="" src="http://archebian.org/img/dynamic-images-logo.jpg"/>
+    <img alt="" src="documentation/images/logo.jpg"/>
 </p>
 <hr>
 <h4 align="center">
-    Dynamic Images is a Concrete5 addon
+    Dynamic Images is a Concrete5 add-on
 </h4>
 <p align="center">
     Dynamic Images allows you to add any amount of images to an unordered list.
@@ -11,9 +11,9 @@
 <article class="markdown-body">
     <h1>Introduction</h1>
     <p> Upon the initial installation, you will find the Dynamic Images block added the the multimedia block section of your website: </p>
-    <img alt="" src="http://archebian.org/img/multimedia.jpg"/>
+    <img alt="" src="documentation/images/multimedia.jpg"/>
     <h1>How To Use This Block</h1>
-    <p>After adding this block to a page, you will be presented with the blocks form where you can may:</p>
+    <p>After adding this block to a page, you will be presented with the blocks form where you may:</p>
     <ul>
         <li>
             Add, delete, and rearrange items.
@@ -22,21 +22,24 @@
             Add custom classes to each item in the block directly.
         </li>
         <li>
-            Set global options, such as image cropping or custom classes for the entire block.
+            Set global options, such as image cropping or custom classes for the entire block, as well as disabling or enabling displaying a title under the image.
         </li>
         <li>
-            Select a prebuilt layout to display your items, or disable block styles altogether if you wish to code your own.
+            Select a prebuilt layout to display your items, such as row or column.
+        </li>
+        <li>
+            Customize the background color and padding being applied to each image.
         </li>
     </ul>
     <h2>Adding, deleting and rearranging items</h2>
     <p>
         To add items to the block, click on the green 'Add Item' button on the left side of the form:
     </p>
-    <img alt="" src="http://archebian.org/img/additem.jpg"/>
+    <img alt="" src="documentation/images/additem.jpg"/>
     <p>Your blocks first dynamic item will then be added the the form, like so: </p>
-    <img alt="" src="http://archebian.org/img/firstitem.jpg"/>
+    <img alt="" src="documentation/images/firstitem.jpg"/>
     <p>Each item you add to the block gets a title where it displays its current item number based on its position in the list of items you add, and the name of the item itself it you happen to give it a title, like so:</p>
-    <img alt="" src="http://archebian.org/img/myfirstitem.jpg"/>
+    <img alt="" src="documentation/images/myfirstitem.jpg"/>
     <p>The titles only update once you've saved the block, but the item # will update automatically whenever you rearrange items.</p>
     <p>After you have added more than one item you may rearrange them by clicking on the arrow icon on the right and dragging the item up or down.</p>
     <p>To remove an item, simply click the red delete button on the item.</p>
@@ -46,7 +49,7 @@
         To select an image, click the image icon next to the 'Collapse Details' button.  Select your image from the file manager and it will appear in the form.<br>
     </p>
     <h2>Global Options</h2>
-    <img alt="" src="http://archebian.org/img/options.jpg"/>
+    <img alt="" src="documentation/images/options.jpg"/>
     <p>The edit block form has three tabs at the top.  The first tab is for the blocks content, which we just covered.  Next is the 'Options' tab.  From here you can do a variety of things such as:</p>
     <ul>
         <li><b>Enable or disable the title.</b>  This won't remove the title field from the form, but it will remove it from the view for when the block is loaded on a page.</li>
@@ -55,9 +58,8 @@
         <li><b>Custom class for entire block</b> Supplying a class or class names here will apply the class name to the entire block element.  If more than one class is entered seperate them with spaces.</li>
     </ul>
     <h2>Layout Options</h2>
-    <p>The last tab at the top is labeled Layout.  From here you can select a pre-built layout for when the block is loaded on a page.  A preview of how this looks will be displayed below the layout selection in the form.  You may disable styling altogether if you so please.</p>
-    <img alt="" src="http://archebian.org/img/layouts.jpg"/>
-    <h2>Customizing the layout</h2>
-    <p>To change the way the block displays, you will need to edit the view.css, and also the view.php if you are planning on changing the markup structure. Of course, the block allows for adding custom classes within the blocks form so you may not need to edit anything directly.
+    <p>The layout options is where you can select a pre-built layout for when the block is loaded on a page.  A preview of how this looks will be displayed below the layout selection in the form.</p>
+    <img alt="" src="documentation/images/layouts.jpg"/>
     </p>
+    <h2>Customizing colors and padding</h2>
 </article>

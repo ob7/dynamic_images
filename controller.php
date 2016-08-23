@@ -8,7 +8,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'dynamic_images';
     protected $appVersionRequired = '5.7.5.1';
-    protected $pkgVersion = '0.9.9.4';
+    protected $pkgVersion = '0.9.9.5';
 
     public function getPackageName()
     {
@@ -38,5 +38,13 @@ class Controller extends Package
             array('javascript', 'dynamic_images_form_js'),
             array('css', 'dynamic_images_form_css')
         ));
+
+        //bootstrap switch
+        $al->register('javascript', 'bootstrapswitch', 'js/bootstrap-switch.min.js',
+                      array('version' => '3.3.2', 'position' => Asset::ASSET_POSITION_FOOTER, 'minify' => false, 'combine' => false), $this
+        );
+        $al->register('css', 'bootstrapswitch', 'css/bootstrap-switch.min.css',
+                      array('version' => '3.3.2', 'position' => Asset::ASSET_POSITION_FOOTER, 'minify' => false, 'combine' => false), $this
+		    );
     }
 }
