@@ -7,11 +7,12 @@
     Dynamic Images allows you to add any amount of images to an unordered list.
 </p>
 <article class="markdown-body">
-    <h1>Install</h1>
+    <h1>Introduction</h1>
+    <p>
+        Upon the initial installation, you will find the Dynamic Images block added the the multimedia block section of your website:
+    </p>
+    <img alt="" src="http://archebian.org/img/dynamic-images-multimedia.png"/>
 </article>
-<p>
-    Upon the initial installation, you will find the Dynamic Images block added the the multimedia block section of your website:
-</p>
 <p>
     The edit block form has three tabs at the top.  The first tab is for the blocks content.  Since the block is used for creaing repeatable items, you will need to start out by clicking the 'Add Item' button.  To add multiple items simply click the 'Add Item' button for each image you'd like to add.
 </p>
