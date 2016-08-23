@@ -29,7 +29,9 @@ class Controller extends BlockController
 
 
         if(!$this->displayTitle) { //set displayTitle to true on initial add
-            $displayTitle = 1;
+            $displayTitle = true;
+        } else {
+            $displayTitle = false;
         }
         $this->set('displayTitle', $displayTitle);
 
@@ -45,6 +47,10 @@ class Controller extends BlockController
 
 
         $this->requireAsset('dynamic_images_form'); //load external assets for form.php
+
+        // Assets for bootstrap checkbox as switch
+        $this->requireAsset('javascript','bootstrapswitch');
+        $this->requireAsset('css','bootstrapswitch');
     }
 
     public function edit()
@@ -56,6 +62,9 @@ class Controller extends BlockController
         $this->set('items', $query);
         $this->requireAsset('dynamic_images_form');
 
+        // Assets for bootstrap checkbox as switch
+        $this->requireAsset('javascript','bootstrapswitch');
+        $this->requireAsset('css','bootstrapswitch');
     }
 
     public function view()
@@ -85,7 +94,8 @@ class Controller extends BlockController
 
     public function save($data)
     {
-        $data['displayTitle'] = intval($data['displayTitle']);
+        /* $data['displayTitle'] = intval($data['displayTitle']);*/
+        $data['displayTitle'] = $data['displayTitle'] ? 1 : 0;
         $data['enableImage'] = intval($data['enableImage']);
         $data['cropImage'] = intval($data['cropImage']);
         $data['crop'] = intval($data['crop']);

@@ -13,6 +13,11 @@ if(!$cropHeight) {
     $cropHeight = 200;
 }
 ?>
+<script>
+$(document).ready(function(){
+	$("[type='checkbox']").bootstrapSwitch();
+});
+</script>
 
 <div class="ccm-tab-content" id="ccm-tab-content-items">
     <div class="repeatable-elements-container">
@@ -29,12 +34,15 @@ if(!$cropHeight) {
 </div>
 
 <div class="ccm-tab-content" id="ccm-tab-content-options">
-    <label class="control-label"><?php echo t('Display Title?');?></label>
     <div class="option-box" data-option=".display-title">
-        <select class="form-control" name="displayTitle">
-            <option <?php echo $displayTitle == 0 ? 'selected' : '';?> value="0"><?php echo t('No')?></option>
-            <option <?php echo $displayTitle == 1 ? 'selected' : '';?> value="1"><?php echo t('Yes')?></option>
-        </select>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <label class="control-label"><?php echo t('Display Titles?');?></label>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <?php echo $form->checkbox('displayTitle', 1, $displayTitle, array('data-size' => 'small', 'data-on-color' => 'success', 'data-off-color' => 'danger'))?>
+            </div>
+        </div>
     </div>
     <label class="control-label"><?php echo t('Enable Images?');?></label>
     <div class="option-box" data-option=".enable-image">
