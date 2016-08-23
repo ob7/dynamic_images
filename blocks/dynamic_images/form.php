@@ -3,7 +3,8 @@
 echo Core::make('helper/concrete/ui')->tabs(array(
     array('items', t('Items'), true),
     array('options', t('Options')),
-    array('layout', t('Layout'))
+    array('layout', t('Layout')),
+    array('colors', t('Colors'))
 ));
 
 if(!$cropWidth) {
@@ -82,18 +83,21 @@ $(document).ready(function(){
 </div>
 <div class="ccm-tab-content" id="ccm-tab-content-layout">
     <label class="control-label">
-        <?php echo t('Choose styling')?>
+        <?php echo t('Choose layout')?>
     </label>
     <select class="form-control" id="stylingOptions" name="styling">
-        <option <?php echo $styling == 'none' ? 'selected ' : ''?> value="none">None (No Styles will be applied by block)</option>
-        <option <?php echo $styling == 'default' ? 'selected ' : ''?>value="default">Default</option>
+        <option <?php echo $styling == 'none' ? 'selected ' : ''?> value="none">None (No layout will be applied by block)</option>
+        <option <?php echo $styling == 'default' ? 'selected ' : ''?>value="default">Column</option>
         <option <?php echo $styling == 'row-of-flex' ? 'selected ' : ''?>value="row-of-flex">Row</option>
     </select>
     <div id="stylesPreview" class="style-preview-container <?php echo $styling?>">
-        <h3>Style Preview:</h3>
+        <h3>Layout Preview:</h3>
         <div class="style-preview">
         </div>
     </div>
+</div>
+<div class="ccm-tab-content" id="ccm-tab-content-colors">
+    <?php echo $form->label('backgroundColor', t('Background Color'))?><br/>
 </div>
 <script>
  $('.option-box select.top-option').click(function() {
