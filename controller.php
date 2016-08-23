@@ -3,12 +3,14 @@ namespace Concrete\Package\DynamicImages;
 
 use Package;
 use BlockType;
+use AssetList;
+use \Concrete\Core\Asset\Asset;
 
 class Controller extends Package
 {
     protected $pkgHandle = 'dynamic_images';
     protected $appVersionRequired = '5.7.5.1';
-    protected $pkgVersion = '0.9.9.5';
+    protected $pkgVersion = '0.9.9.6';
 
     public function getPackageName()
     {
@@ -31,7 +33,7 @@ class Controller extends Package
 
     public function on_start()
     {
-        $al = \Concrete\Core\Asset\AssetList::getInstance();
+        $al = AssetList::getInstance();
         $al->register('javascript', 'dynamic_images_form_js', 'blocks/dynamic_images/form.js', array(), 'dynamic_images');
         $al->register('css', 'dynamic_images_form_css', 'blocks/dynamic_images/form.css', array(), 'dynamic_images');
         $al->registerGroup('dynamic_images_form', array(
