@@ -13,7 +13,21 @@
     <p> Upon the initial installation, you will find the Dynamic Images block added the the multimedia block section of your website: </p>
     <img alt="" src="http://archebian.org/img/multimedia.jpg"/>
     <h1>How To Use This Block</h1>
-    <p>After adding this block to a page, you will be presented with the blocks form where you can add, delete, rearrange, set options such as crop, and select a prebuilt layout to display your content in.</p>
+    <p>After adding this block to a page, you will be presented with the blocks form where you can may:</p>
+    <ul>
+        <li>
+            Add, delete, and rearrange items.
+        </li>
+        <li>
+            Add custom classes to each item in the block directly.
+        </li>
+        <li>
+            Set global options, such as image cropping or custom classes for the entire block.
+        </li>
+        <li>
+            Select a prebuilt layout to display your items, or disable block styles altogether if you wish to code your own.
+        </li>
+    </ul>
     <h2>Adding Items</h2>
     <p>The edit block form has three tabs at the top.  The first tab is for the blocks content.  Since the block is used for creaing repeatable items, you will need to start out by clicking the 'Add Item' button.  To add multiple items simply click the 'Add Item' button for each image you'd like to add. </p>
     <p>
