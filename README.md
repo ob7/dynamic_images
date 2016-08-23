@@ -46,6 +46,7 @@
         To select an image, click the image icon next to the 'Collapse Details' button.  Select your image from the file manager and it will appear in the form.<br>
     </p>
     <h2>Global Options</h2>
+    <img alt="" src="http://archebian.org/img/options.jpg"/>
     <p>The edit block form has three tabs at the top.  The first tab is for the blocks content, which we just covered.  Next is the 'Options' tab.  From here you can do a variety of things such as:</p>
     <ul>
         <li><b>Enable or disable the title.</b>  This won't remove the title field from the form, but it will remove it from the view for when the block is loaded on a page.</li>
