@@ -57,4 +57,7 @@
     <h2>Layout Options</h2>
     <p>The last tab at the top is labeled Layout.  From here you can select a pre-built layout for when the block is loaded on a page.  A preview of how this looks will be displayed below the layout selection in the form.  You may disable styling altogether if you so please.</p>
     <img alt="" src="http://archebian.org/img/layouts.jpg"/>
+    <h2>Customizing the layout</h2>
+    <p>To change the way the block displays, you will need to edit the view.css, and also the view.php if you are planning on changing the markup structure. Of course, the block allows for adding custom classes within the blocks form so you may not need to edit anything directly.
+    </p>
 </article>
