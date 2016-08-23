@@ -54,5 +54,6 @@
         <li><b>Custom class for entire block</b> Supplying a class or class names here will apply the class name to the entire block element.  If more than one class is entered seperate them with spaces.</li>
     </ul>
     <h2>Layout Options</h2>
-    <p>The last tab at the top is labeled Layout.  From here you can select a pre-built layout for when the block is loaded on a page.  A preview of how this looks will be displayed below.  You may disable styling altogether if you so please.</p>
+    <p>The last tab at the top is labeled Layout.  From here you can select a pre-built layout for when the block is loaded on a page.  A preview of how this looks will be displayed below the layout selection in the form.  You may disable styling altogether if you so please.</p>
+    <img alt="" src="http://archebian.org/img/layout.jpg"/>
 </article>
