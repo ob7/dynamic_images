@@ -1,9 +1,8 @@
 <p align="center">
     <img alt="" src="http://archebian.org/img/dynamic-images-logo.jpg"/>
 </p>
-<h2> Dynamic Images </h2>
-<h4> A Concrete5 addon </h2>
 <hr>
+<h4> A Concrete5 addon </h2>
 <p>
     Dynamic Images allows you to add any amount of images to an unordered list.
 </p>
