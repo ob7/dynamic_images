@@ -11,7 +11,7 @@
     <p>
         Upon the initial installation, you will find the Dynamic Images block added the the multimedia block section of your website:
     </p>
-    <img alt="" src="http://archebian.org/img/dynamic-images-multimedia.png"/>
+    <img alt="" src="http://archebian.org/img/multimedia.jpg"/>
 </article>
 <p>
     The edit block form has three tabs at the top.  The first tab is for the blocks content.  Since the block is used for creaing repeatable items, you will need to start out by clicking the 'Add Item' button.  To add multiple items simply click the 'Add Item' button for each image you'd like to add.
