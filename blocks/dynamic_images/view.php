@@ -5,7 +5,7 @@ if ($cropImage == 1) {
 }
 if ($c->isEditMode()) { ?>
     <div class="ccm-edit-mode-disabled-item" style="<?php   echo isset($width) ? "width: $width;" : '' ?><?php   echo isset($height) ? "height: $height;" : '' ?>">
-        <div style="padding: 40px 0px 40px 0px"><?php echo t('Repeatable Element view disabled in edit mode.')?></div>
+        <div style="padding: 40px 0px 40px 0px"><?php echo t('Dynamic Images view is disabled while in edit mode.')?></div>
     </div>
 <?php } else { ?>
         <style>
