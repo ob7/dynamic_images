@@ -55,5 +55,5 @@
     </ul>
     <h2>Layout Options</h2>
     <p>The last tab at the top is labeled Layout.  From here you can select a pre-built layout for when the block is loaded on a page.  A preview of how this looks will be displayed below the layout selection in the form.  You may disable styling altogether if you so please.</p>
-    <img alt="" src="http://archebian.org/img/layout.jpg"/>
+    <img alt="" src="http://archebian.org/img/layouts.jpg"/>
 </article>
