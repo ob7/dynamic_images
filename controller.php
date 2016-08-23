@@ -17,7 +17,7 @@ class Controller extends Package
 
     public function getPackageDescription()
     {
-        return t('Starter package for making a block with repeatable images');
+        return t('Creates blocks with multiple images and options');
     }
 
     public function install()

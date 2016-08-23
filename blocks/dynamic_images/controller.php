@@ -20,12 +20,13 @@ class Controller extends BlockController
 
     public function getBlockTypeDescription()
     {
-        return t('Repeatable Dynamic Images Starter Block');
+        return t('Repeatable Dynamic Images');
     }
 
     public function add()
     {
         $this->requireAsset('core/file-manager');
+
 
         if(!$this->displayTitle) { //set displayTitle to true on initial add
             $displayTitle = 1;
@@ -41,6 +42,7 @@ class Controller extends BlockController
             $styling = 'default';
         }
         $this->set('styling', $styling);
+
 
         $this->requireAsset('dynamic_images_form'); //load external assets for form.php
     }
