@@ -28,7 +28,11 @@
             Select a prebuilt layout to display your items, or disable block styles altogether if you wish to code your own.
         </li>
     </ul>
-    <h2>Adding Items</h2>
+    <h2>Adding, deleting and rearranging items</h2>
+    <p>
+        To add items to the block, click on the green 'Add Item' button on the left:
+    </p>
+    <img alt="" src="http://archebian.org/img/additem.jpg"/>
     <p>The edit block form has three tabs at the top.  The first tab is for the blocks content.  Since the block is used for creaing repeatable items, you will need to start out by clicking the 'Add Item' button.  To add multiple items simply click the 'Add Item' button for each image you'd like to add. </p>
     <p>
         To select an image, click the image icon next to the 'Collapse Details' button.  Select your image from the file manager and it will appear in the form.<br>
