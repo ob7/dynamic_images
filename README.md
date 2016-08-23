@@ -37,16 +37,22 @@
     <img alt="" src="http://archebian.org/img/firstitem.jpg"/>
     <p>Each item you add to the block gets a title where it displays its current item number based on its position in the list of items you add, and the name of the item itself it you happen to give it a title, like so:</p>
     <img alt="" src="http://archebian.org/img/myfirstitem.jpg"/>
-    <p>The edit block form has three tabs at the top.  The first tab is for the blocks content.  Since the block is used for creaing repeatable items, you will need to start out by clicking the 'Add Item' button.  To add multiple items simply click the 'Add Item' button for each image you'd like to add. </p>
+    <p>The titles only update once you've saved the block, but the item # will update automatically whenever you rearrange items.</p>
+    <p>After you have added more than one item you may rearrange them by clicking on the arrow icon on the right and dragging the item up or down.</p>
+    <p>To remove an item, simply click the red delete button on the item.</p>
+    <h2>Adding custom classes to individual items</h2>
+    <p>To add a class on individual items in the block, simply supply the class or class names you want applied to that item within the custom class field on the item. If supplying multiple class names, simply seperate the class names with a space.</p>
     <p>
         To select an image, click the image icon next to the 'Collapse Details' button.  Select your image from the file manager and it will appear in the form.<br>
-        Optionall, you may add a title that will be displayed along with the image when the block is displayed on your website.
     </p>
-    <p>
-        The custom class area lets you add a custom class to this specific element, incase you want to add custom styles from your own CSS.  Inside the layouts tab you can select one of the different layout options built in, or you may simply turn off syling if you plan to style it yourself.
-    </p>
-    <p>
-        The options tab allows you to enable or disable certain features.  For example, you can disable showing the title, or even disable images altogether although in most cases you will want to keep this enabled.<br>
-        The custom class field in the options tab allows you to add a custom class to the entire container rather than each individual element.  You can still use both of course, but applying a global class to the entire element is quicker than adding it to each element if you are creating your own styles for the block.
-    </p>
+    <h2>Global Options</h2>
+    <p>The edit block form has three tabs at the top.  The first tab is for the blocks content, which we just covered.  Next is the 'Options' tab.  From here you can do a variety of things such as:</p>
+    <ul>
+        <li><b>Enable or disable the title.</b>  This won't remove the title field from the form, but it will remove it from the view for when the block is loaded on a page.</li>
+        <li><b>Enable or disable images.</b>  Not that you would want to disable images as thats what the block is mainly for, but you may do so if you please.</li>
+        <li><b>Resize and crop images.</b>  When images are enable the image options appear beneath.  You may enable resizing and cropping the images in the block.  This will resize and crop all the images contained within the block.</li>
+        <li><b>Custom class for entire block</b> Supplying a class or class names here will apply the class name to the entire block element.  If more than one class is entered seperate them with spaces.</li>
+    </ul>
+    <h2>Layout Options</h2>
+    <p>The last tab at the top is labeled Layout.  From here you can select a pre-built layout for when the block is loaded on a page.  A preview of how this looks will be displayed below.  You may disable styling altogether if you so please.</p>
 </article>
