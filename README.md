@@ -1,4 +1,6 @@
-<img alt="" src="http://archebian.org/img/dynamic-images-logo.jpg"/>
+<div class="dynamic-images-logo" style="text-align: center;">
+    <img alt="" src="http://archebian.org/img/dynamic-images-logo.jpg"/>
+</div>
 <h2> Dynamic Images </h2>
 <h4> A Concrete5 addon </h2>
 <hr>
