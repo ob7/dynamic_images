@@ -33,8 +33,10 @@
         To add items to the block, click on the green 'Add Item' button on the left side of the form:
     </p>
     <img alt="" src="http://archebian.org/img/additem.jpg"/>
-    <p>Your blocks dynamic item will then be added the the form, like so: </p>
+    <p>Your blocks first dynamic item will then be added the the form, like so: </p>
     <img alt="" src="http://archebian.org/img/firstitem.jpg"/>
+    <p>Each item you add to the block gets a title where it displays its current item number based on its position in the list of items you add, and the name of the item itself it you happen to give it a title, like so:</p>
+    <img alt="" src="http://archebian.org/img/myfirstitem.jpg"/>
     <p>The edit block form has three tabs at the top.  The first tab is for the blocks content.  Since the block is used for creaing repeatable items, you will need to start out by clicking the 'Add Item' button.  To add multiple items simply click the 'Add Item' button for each image you'd like to add. </p>
     <p>
         To select an image, click the image icon next to the 'Collapse Details' button.  Select your image from the file manager and it will appear in the form.<br>
