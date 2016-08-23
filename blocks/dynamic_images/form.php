@@ -65,10 +65,10 @@ $(document).ready(function(){
             </select>
             <div class="crop-options <?php    echo $cropImage == 0 ? 'disabled' : ''?>">
                 <label class="control-label"><?php echo t('Width');?></label>
-                <input class="form-control" name="cropWidth" type="text" value="<?php echo $cropWidth?>"/>
+                <input class="form-control" name="cropWidth" type="number" value="<?php echo $cropWidth?>"/>
 
                 <label class="control-label"><?php echo t('Height');?></label>
-                <input class="form-control" name="cropHeight" type="text" value="<?php echo $cropHeight?>"/>
+                <input class="form-control" name="cropHeight" type="number" value="<?php echo $cropHeight?>"/>
 
                 <label class="control-label"><?php echo t('Crop to dimensions?');?></label>
                 <select class="form-control" name="crop">
