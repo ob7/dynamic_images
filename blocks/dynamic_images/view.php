@@ -22,20 +22,18 @@ if ($c->isEditMode()) { ?>
                 <?php
                 $f = File::getByID($item['fID']);
                 if (is_object($f) && $enableImage == 1) {
+                    //cropImage is retardly named so, it really means resizeImage, and $crop means crop
                     if ($cropImage == 1) {
                         $width = $cropWidth;
                         $height = $cropHeight;
                         $alt = null;
                         $crop = $crop;
-                        $image = $ih->outputThumbnail($f, $width, $height, $alt, $crop);
-                        echo '<div class="dynamic-image-item-image">';
-                        echo $image;
-                        echo '</div>';
+                        $image = $ih->outputThumbnail($f, $width, $height, $alt, true, $crop);
+                        echo '<div class="dynamic-image-item-image">' . $image . '</div>';
                     } else if ($cropImage == 0) {
                         $tag = Core::make('html/image', array($f, false))->getTag();
-                        echo '<div class="dynamic-image-item-image">';
-                        echo $tag;
-                        echo '</div>';
+                        $tag->addClass('img-responsive');
+                        echo '<div class="dynamic-image-item-image">' . $tag . '</div>';
                     }
                 }
                 ?>

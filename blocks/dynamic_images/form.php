@@ -72,8 +72,8 @@ $(document).ready(function(){
 
                 <label class="control-label"><?php echo t('Crop to dimensions?');?></label>
                 <select class="form-control" name="crop">
-                    <option <?php echo $crop ? '' : 'selected'?> value="0">No</option>
-                    <option <?php echo $crop ? 'selected' : ''?> value="1">Yes</option>
+                    <option <?php echo $crop == 0 ? '' : 'selected'?> value="0">No</option>
+                    <option <?php echo $crop == 1 ? 'selected' : ''?> value="1">Yes</option>
                 </select>
             </div>
         </div>
