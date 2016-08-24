@@ -3,7 +3,7 @@
 </p>
 <hr>
 <h4 align="center">
-    Dynamic Images is a Concrete5 add-on
+    Dynamic Images <i>is a Concrete5 add-on</i>
 </h4>
 <p align="center">
     Dynamic Images allows you to add any amount of images to an unordered list.
