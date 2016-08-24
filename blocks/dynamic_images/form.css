@@ -2,9 +2,9 @@
 .repeatable-element-entry {
   padding: 16px;
   border-radius: 4px;
-  background: #F5F5F5;
   border: 1px solid #E3E3E3;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  box-shadow: 0 0 3px #48b4fb; }
 
 .repeatable-element-entry-row {
   display: flex;
