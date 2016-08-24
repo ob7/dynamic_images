@@ -8,6 +8,9 @@
 <p align="center">
     Dynamic Images allows you to add any amount of images to an unordered list.
 </p>
+<p align="center">
+    <img alt="" src="documentation/images/dynamic-images.jpg"/>
+</p>
 <article class="markdown-body">
     <h1>Introduction</h1>
     <p> Upon the initial installation, you will find the Dynamic Images block added the the multimedia block section of your website: </p>
