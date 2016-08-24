@@ -81,5 +81,4 @@
     <p>To change the background color, use the color picker on the left.  Make sure you click 'Choose' after selecting the color.</p>
     <img alt="" src="documentation/images/image12.jpg"/>
     <hr/>
-    <p>Live preview coming soon.</p>
 </article>
