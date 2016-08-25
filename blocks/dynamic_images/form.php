@@ -80,7 +80,7 @@ $(document).ready(function(){
     </div>
     <label class="control-label"><?php echo t('Custom Class For Entire Block (Optional):');?></label>
     <div class="option-box" data-option=".custom-class">
-        <input class="form-control" name="customClass" type="text" value="<?php echo $customClass?>"/>
+        <input class="form-control" name="customClass" type="text" maxlength="255" value="<?php echo $customClass?>"/>
     </div>
 </div>
 <div class="ccm-tab-content" id="ccm-tab-content-layout">
@@ -208,12 +208,12 @@ $(document).ready(function(){
             <!-- Title -->
             <div class="form-group">
                 <label><?php    echo t('Title');?></label>
-                <input class="form-control" name="<?php    echo $view->field('title'); ?>[]" type="text" value="<%=title%>" />
+                <input class="form-control" name="<?php    echo $view->field('title'); ?>[]" type="text" maxlength="60" value="<%=title%>" />
             </div>
             <!-- Custom Class For Element -->
             <div class="form-group">
                 <label><?php    echo t('Custom Class For This Element (Optional)');?></label>
-                <input class="form-control" name="<?php    echo $view->field('customElementClass'); ?>[]" type="text" value="<%=custom_element_class%>" />
+                <input class="form-control" name="<?php    echo $view->field('customElementClass'); ?>[]" type="text" maxlength="255" value="<%=custom_element_class%>" />
             </div>
             <!--Sort Order-->
             <input class="repeatable-element-entry-sort" name="<?php    echo $view->field('sortOrder');?>[]" type="hidden" value="<%=sort_order%>"/>
