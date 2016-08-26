@@ -128,6 +128,8 @@ $(document).ready(function(){
                 </div>
                 <p class="small muted">This is the padding applied to the images themselves.  If any padding is present the color set to the left will appear as a border.</p>
                 <script type="text/javascript">
+                 $(function() {
+                     
                     $('input.image_padding_slider').hide();
                     $('div.image_padding_slider').
                     slider(
@@ -142,6 +144,7 @@ $(document).ready(function(){
                                 $('input.image_padding_slider').val(uiobj.value);
                             }
                         });
+                 });
                 </script>
             </div>
         </div>
