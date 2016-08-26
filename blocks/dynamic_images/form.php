@@ -124,25 +124,25 @@ $(document).ready(function(){
                 <?php
                 echo $form->text('imagePadding', $imagePadding, array('class'=>'image_padding_slider'));
                 ?>
-            <div class="image_padding_slider">
-            </div>
-            <p class="small muted">This is the padding applied to the images themselves.  If any padding is present the color set to the left will appear as a border.</p>
-            <script type="text/javascript">
-            $('input.image_padding_slider').hide();
-            $('div.image_padding_slider').
-            slider(
-                {
-                    range: "min",
-                    min  : 0,
-                    step : 1,
-                    max  : 200,
-                    value: parseInt($('span.image_padding_slider').text(),10),
-                    slide: function(event, uiobj) {
-                        $('span.image_padding_slider').text(uiobj.value+'px');
-                        $('input.image_padding_slider').val(uiobj.value);
-                    }
-                });
-            </script>
+                <div class="image_padding_slider">
+                </div>
+                <p class="small muted">This is the padding applied to the images themselves.  If any padding is present the color set to the left will appear as a border.</p>
+                <script type="text/javascript">
+                    $('input.image_padding_slider').hide();
+                    $('div.image_padding_slider').
+                    slider(
+                        {
+                            range: "min",
+                            min  : 0,
+                            step : 1,
+                            max  : 200,
+                            value: parseInt($('span.image_padding_slider').text(),10),
+                            slide: function(event, uiobj) {
+                                $('span.image_padding_slider').text(uiobj.value+'px');
+                                $('input.image_padding_slider').val(uiobj.value);
+                            }
+                        });
+                </script>
             </div>
         </div>
     </div>
